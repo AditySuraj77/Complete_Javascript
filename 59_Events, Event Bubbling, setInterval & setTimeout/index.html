@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Events, Event Bubbling, setInterval & setTimeout</title>
+</head>
+
+<body>
+     <div class="container">
+          Events, Event Bubbling, setInterval & setTimeout
+     </div>
+     <button id="btn">Click</button>
+     <button id="btn2">Click for show alert</button>
+     <button id="btn3">Mousehover</button>
+     <button id="btn4">Mouseout</button>
+     <button id="btn5">Click to change the backgroundColor</button>
+
+
+     <script>
+          let buttons = document.getElementById('btn')
+          buttons.addEventListener('click', (e) => {
+               console.log(e.type)
+               console.log(e.currentTarget)
+               console.log(e.clientX,e.clientY)
+               document.querySelector('.container').innerHTML = "<b> Events in Javascript </b>"
+          })
+
+          let buttons2 = document.getElementById('btn2')
+          buttons2.addEventListener('click', () => {
+               alert('Events Occurs ')
+          })
+
+          let buttons3 = document.getElementById('btn3')
+          buttons3.addEventListener('mouseover', () => {
+               alert('Mousehover Events Occurs ')
+          })
+
+          let buttons4 = document.getElementById('btn4')
+          buttons4.addEventListener('mouseout', () => {
+               alert('MouseOut Events Occurs ')
+          })
+
+
+          function changebg() {
+               document.body.style.backgroundColor = 'yellow'
+          }
+
+          let button5 = document.getElementById('btn5')
+          button5.addEventListener('click', changebg)
+
+          // button5.removeEventListener('click', changebg, false)
+
+
+
+     </script>
+</body>
+
+</html>

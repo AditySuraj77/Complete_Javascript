@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Async & Await</title>
+</head>
+
+<body>
+     <h1>Hello World</h1>
+     <button id="btn1">Stop</button>
+     <button id="btn2">Start</button>
+</body>
+<script>
+     /*
+     let changetext = function changeheader() {
+          document.querySelector('h1').innerHTML = 'Javascript'
+     }
+
+     let stoptimeout = setTimeout(changetext, 3000)
+
+     document.querySelector('#btn1').addEventListener('click', () => {
+          clearTimeout(stoptimeout)
+
+          console.log('STOP');
+     })
+     */
+
+
+     let display;
+     const display_datetime = function display_date() {
+          let date = new Date()
+          document.querySelector('h1').innerHTML = date.toLocaleTimeString()
+
+     }
+
+
+     document.querySelector('#btn2').addEventListener('click', () => {
+          display = setInterval(display_datetime, 1000)
+
+     })
+
+     document.querySelector('#btn1').addEventListener('click', () => {
+          clearInterval(display)
+
+     })
+</script>
+
+</html>

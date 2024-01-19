@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Practice</title>
+
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+          }
+          header nav ul{
+               display: flex;
+               gap: 30px;
+               background-color: tan;
+               height: 80px;
+               align-items: center;
+               
+
+          }
+          li{
+               list-style: none;
+               margin: 10px;
+               font-family:'Arial Narrow Bold', sans-serif;
+               font-size: 50px;
+               
+               
+          }
+          .parent span{
+               font-size: 80px;
+               
+
+          }
+     </style>
+</head>
+<body>
+     <header>
+          <nav>
+               <ul>
+                    <li id="f-element">Site</li>
+                    <li>Home</li>
+                    <li>About Us</li>
+               </ul>
+          </nav>
+     </header>
+
+     <div class="parent">
+          <span>Element 1 </span>
+          <span>Element 2 </span>
+          <span>Element 3 </span>
+     </div>
+     
+     <script>
+          // Answer 1
+
+          let f_element = document.getElementById('f-element')
+          f_element.style.color = 'red';
+
+
+          // Answer 2
+          let el= document.getElementsByClassName('parent')[0]
+          el.children[0].style.color = 'green';
+          el.children[2].style.color = 'green';
+
+          // Answer 3
+          let li_bg_colo = document.getElementsByTagName('li')
+          li_bg_colo[0].style.backgroundColor = 'cyan';
+          li_bg_colo[1].style.backgroundColor = 'cyan';
+          li_bg_colo[2].style.backgroundColor = 'cyan';
+     </script>
+</body>
+</html>

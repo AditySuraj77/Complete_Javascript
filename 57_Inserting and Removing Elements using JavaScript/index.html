@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Inserting and Removing Elements using JavaScript</title>
+     <style>
+          .red{
+               color: red;
+          }
+     </style>
+
+</head>
+<body>
+     <div class="container red" style="display: flex;">
+          <div class="box check ram dam four" data-createdby="Adity">Inserting and Removing Elements using JavaScript</div>
+     </div>
+     <div id="mydiv">Best</div>
+     
+
+
+
+
+     <script>
+          // document.querySelector('.container').tagName
+          // document.querySelector('.container').nodeName
+          // document.querySelector('.container').innerHTML
+          // document.querySelector('.box').innerHTML
+          // document.querySelector('.container').outerHTML
+          // document.querySelector('.container').outerText
+          // document.querySelector('.container').innerText
+          // document.querySelector('.box').textContent
+          ///document.querySelector('.container').hidden = true
+
+
+          // Attribute Methods
+
+          // document.querySelector('.container').hasAttribute("style")
+          // document.querySelector('.container').getAttribute('style')
+          // document.querySelector('.container').setAttribute('style','display: inline')
+          // document.querySelector('.container').removeAttribute('style')
+          // document.querySelector('.container').attributes
+
+
+          // data-attributes
+
+          // document.querySelector('.box').dataset
+
+
+          // Insertions Method
+
+          let div = document.createElement('h1')
+
+          div.className = 'heading'
+          div.innerHTML = '<span>Hello worlds</span>'
+
+
+          document.body.append(div)
+          // document.body.prepend(div)
+          // document.body.before(div)
+          //document.body.after(div)
+          //document.body.replaceWith(div)
+
+          // insertAdjacentHTML
+
+          /*
+          let cont = document.querySelector('.container')
+          cont.insertAdjacentHTML("afterbegin","<marquee>Hii i am Container</marquee>")
+          */
+          /*
+         let cont = document.querySelector('.container')
+         cont.insertAdjacentHTML("afterend","<marquee>Hii i am Container</marquee>")
+         */
+          /*
+         let cont = document.querySelector('.container')
+         cont.insertAdjacentHTML("beforebegin","<marquee>Hii i am Container</marquee>")
+         */
+          let cont = document.querySelector('.container')
+          cont.insertAdjacentHTML("beforeend", "<marquee>Hii i am Container</marquee>")
+
+          // Node Removal
+          /*
+         let rem = document.getElementById('mydiv')
+         rem.remove()
+          */
+          
+
+
+
+          // ClassName and ClassList
+          
+          // document.querySelector('.box').classList
+          // document.querySelector('.box').className
+          // document.querySelector('.box').classList.add('tom')
+          // document.querySelector('.box').classList.remove('check')
+          // document.querySelector('.container').classList.toggle('red')
+     </script>
+</body>
+
+</html>

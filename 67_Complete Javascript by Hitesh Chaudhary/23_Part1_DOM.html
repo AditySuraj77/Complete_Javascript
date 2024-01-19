@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document Object Model</title>
+</head>
+<body class="main-bg">
+     <div class="cls-bg" id="f-id">
+          <h1 class="head" id="s-id">DOM Learning <span>same</span></h1>
+          <p class="para" id="t-id">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro veniam officiis maiores ullam earum nesciunt et explicabo nobis voluptas. Dolorem reprehenderit repellendus vero at, explicabo quaerat provident minima voluptatibus!</p>
+
+          <ul>
+               <li class="cls-item">First</li>
+               <li class="cls-item">Second</li>
+               <li class="cls-item">Third</li>
+               <li class="cls-item">Fourth</li>
+               <li class="cls-item">Five</li>
+          </ul>
+     </div>
+     <script>
+
+
+          const sel_by_id = document.getElementById('s-id')
+          sel_by_id.style.backgroundColor = 'red'
+          sel_by_id.style.textAlign = 'center'
+          sel_by_id.style.borderRadius = '20px'
+
+
+          const clasname = document.getElementsByClassName('para')
+          clasname[0].style.backgroundColor = 'aqua'
+          clasname[0].style.padding = '20px'
+          clasname[0].style.borderRadius = '20px'
+
+
+          const quer_s = document.querySelector('.main-bg')
+          quer_s.style.backgroundColor = 'grey'
+
+
+          const quer_f = document.querySelector('#s-id')
+          quer_f.style.border = "5px solid black"
+          quer_f.innerHTML = 'DOM'
+          quer_f.setAttribute('class', 'myclass')
+          quer_f.setAttribute('class', 'myclass-yourclass')
+
+
+          const li_name = document.querySelectorAll('li')
+          li_name[0].style.backgroundColor = 'black'
+          li_name[0].style.color = 'aqua'
+
+          const li_item = document.querySelectorAll('.cls-item')
+          li_item.forEach((e)=>{
+               e.style.color = 'orange'
+          })
+     </script>
+</body>
+</html>

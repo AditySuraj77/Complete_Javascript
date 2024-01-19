@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Events</title>
+     <style>
+          ul li img {
+               width: 200px;
+          }
+          ul li{
+               list-style: none;
+          }
+          body{
+               background-color: rgb(61, 60, 60);
+          }
+          ul{
+               background-color: rgb(197, 138, 138);
+          }
+          #wiki{
+               color: white;
+               
+          }
+     </style>
+</head>
+
+<body>
+     <ul class="images">
+          <li><img src="https://cdn.pixabay.com/photo/2016/11/22/23/29/meditate-1851165_1280.jpg" id="miditate" alt=""></li>
+          <li><img src="https://cdn.pixabay.com/photo/2016/02/17/19/08/lotus-1205631_1280.jpg" id="lotus" alt=""></li>
+          <li><img src="https://cdn.pixabay.com/photo/2015/04/19/08/33/flower-729514_1280.jpg" id="flower" alt=""></li>
+          <li><img src="https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123_1280.jpg" id="mahal" alt=""></li>
+     </ul>
+
+     <a href="https://www.wikipedia.org/" id="wiki"><h1>WikiPedia</h1></a>
+     <script>
+
+          // Here Prevent Bubbling 
+          document.querySelector('.images').addEventListener('click',()=>{
+               alert('Clicked')
+          })
+
+          document.getElementById('mahal').addEventListener('click',(e)=>{
+               e.stopPropagation() // this method is stop bubbling
+               alert('Mahal Clicked')
+          })
+
+          // stop prevent behavior
+
+          document.getElementById('wiki').addEventListener('click',(e)=>{
+               e.preventDefault() // Stop default behaviours
+               alert('Stop Default Behaviours')
+          })
+
+
+
+          // Write code for removing img from list only remove list means li
+
+          document.querySelector('.images').addEventListener('click',(e)=>{
+               //console.log(e.target.parentNode);
+               
+               if (e.target.tagName === 'IMG') {
+                    let removeimg = e.target.parentNode
+                    removeimg.remove()
+               }
+               
+          })
+     </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>JavaScript - Selecting by Ids, Classes, and More</title>
+     <style>
+          .box {
+               height: 80px;
+               width: 80px;
+               margin: 20px;
+               border: 2px solid black;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <div class="box">Box-1</div>
+          <div class="box">Box-2</div>
+          <div class="box" id="box-3">Box-3</div>
+          <div class="box">Box-4</div>
+          <div class="box">Box-5</div>
+     </div>
+     <h4 class="h_tag">Hello World</h4>
+     <span name="gm">Good Morning</span>
+     <script>
+          // Id Selectors
+          /*
+          let element_by_id = document.getElementById('box-3')
+          element_by_id.style.backgroundColor = 'aqua'*/
+
+
+          // QueryAllSelector
+          /*let q_all_sel = document.querySelectorAll('.box').forEach(e=>{
+               e.style.backgroundColor = 'red';
+          })*/
+
+          // QuerySelector
+
+          /*document.querySelector('.container').style.backgroundColor = 'red';
+          */
+
+          // GetElementName by Tag
+          /*
+          let tag_name = document.getElementsByTagName('div')
+          console.log(tag_name);
+          tag_name[2].style.backgroundColor = 'yellow';
+          */
+
+          // ClassName
+
+          /*
+         let cls_name =  document.getElementsByClassName("h_tag")
+         console.log(cls_name);
+         */
+
+          // Select By Name
+          /*
+          let s_name = document.getElementsByName("gm")
+          console.log(s_name);
+          console.log(s_name.length);
+          */
+
+          // Matches, closest, & containes
+
+          let m = document.getElementsByTagName('div')
+
+          // Matches
+          m[4].matches('.box') 
+          
+          // closest
+          m[3].closest('.container')
+
+          // containes
+          document.querySelector('.container').contains(m[0])
+
+
+
+
+
+     </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Binding</title>
+</head>
+<body>
+     <button>Click</button>
+     <script>
+          class Binding{
+               constructor(){
+                    this.name = 'React'
+                    this.server = 'Abhi Uplabdh Nahi Hai !'
+
+                    document.querySelector('button').addEventListener('click',this.butoonhande.bind(this))
+
+               }
+
+               butoonhande(){
+                    console.log('Button CLicked');
+                    //console.log(this.server);// access particular variables
+                    console.log(this);// access all variables
+               }
+
+          }
+
+          const app = new Binding()
+     </script>
+</body>
+</html>

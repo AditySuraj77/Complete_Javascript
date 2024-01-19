@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>DOM</title>
+</head>
+<body>
+     <ul class="u-list">
+          <li>Python</li>
+     </ul>
+
+     <script>
+          // Add Element
+          function addlist(langname) {
+               const li = document.createElement('li')
+               li.innerHTML = `${langname}`
+               document.querySelector('.u-list').appendChild(li)
+          }
+          addlist('Javscript')
+          addlist('JaVa')
+
+
+
+
+
+
+
+
+          // Edit Element
+          function edit(langname,position) {
+               const sel_elem = document.querySelector(`li:nth-child(${position})`)
+               const li = document.createElement('li')
+               li.textContent = `${langname}`
+               sel_elem.replaceWith(li)
+          }
+          edit('C++',3)
+
+
+
+
+
+
+
+
+
+
+          // Remove Element
+          function remove(position_no) {
+               const rem_elem = document.querySelector(`li:nth-child(${position_no})`)
+               rem_elem.remove()
+               
+          }
+          remove(3)
+
+     </script>
+</body>
+</html>
